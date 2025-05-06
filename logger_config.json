@@ -1,0 +1,47 @@
+{
+	"version": 1,
+	"disable_existing_loggers": false,
+	"formatters":{
+		"default":{
+			"format": "[{asctime}|{levelname}]: {message}",
+			"style": "{",
+			"datefmt": "%Y-%m-%d %H:%M:%S"
+		},
+		"debug": {
+			"format": "[{asctime}|{levelname}|{filename}|{funcName}|{lineno}]: {message}",
+			"style": "{",
+			"datefmt": "%Y-%m-%d %H:%M:%S"
+		}
+	},
+
+	"handlers": {
+		"stderr": {
+			"class": "logging.StreamHandler",
+			"level": "ERROR",
+			"formatter": "default",
+			"stream": "ext://sys.stderr"
+		},
+		"stdout": {
+			"class": "logging.StreamHandler",
+			"level": "WARNING",
+			"formatter": "default",
+			"stream": "ext://sys.stdout"
+		},
+		"file": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"filename": "dj_garo.log",
+			"level": "DEBUG",
+			"formatter": "debug",
+			"maxBytes": 1000000,
+			"backupCount": 5
+		}
+	},
+
+	"loggers": {
+		"dj_garo": {
+			"level": "DEBUG",
+			"handlers": ["stderr", "stdout", "file"],
+			"propagate": true
+		}
+	}
+}
