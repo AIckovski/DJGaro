@@ -10,7 +10,7 @@ from json import loads as json_loads
 load_dotenv()
 
 TOKEN = os.environ["BOT_TOKEN"]
-PROJECT_DIR = Path(__file__).parent.parent
+PROJECT_DIR = Path(__file__).parent
 
 
 def AllowOnlyWarrnings(record: logging.LogRecord) -> bool:
