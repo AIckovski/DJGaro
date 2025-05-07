@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Minimalistic discord bot which streams music from youtube"
 readme = "README.md"
 dependencies = [
-	"discord.py",
+	"discord.py[voice]",
 	"validators",
 	"isoduration",
 	"dotenv",
