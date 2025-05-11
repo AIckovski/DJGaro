@@ -4,7 +4,7 @@ build-meta = "setuptools.build_meta"
 
 [project]
 name = "DJGaro"
-version = "1.0.0"
+version = "0.0.1"
 description = "Minimalistic discord bot which streams music from youtube"
 readme = "README.md"
 dependencies = [

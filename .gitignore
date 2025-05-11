@@ -5,3 +5,4 @@ __pycache__
 *.sublime-workspace
 *.egg-info
 **/*.bckup.py
+build
